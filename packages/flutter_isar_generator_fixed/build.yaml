@@ -1,0 +1,16 @@
+#builders:
+#  isar_generator:
+#    import: "package:flutter_isar_generator_fixed/flutter_isar_generator_fixed.dart"
+#    builder_factories: ["generatorBuilderTest"]
+#    build_extensions: { ".dart": ["isar_generator.g.part"] }
+#    auto_apply: dependents
+#    build_to: cache
+#    applies_builders: ["source_gen|combining_builder"]
+builders:
+  isar_generator:
+    import: "package:flutter_isar_generator_fixed/flutter_isar_generator_fixed.dart"
+    builder_factories: ["getIsarGenerator"]
+    build_extensions: { ".dart": ["isar_generator.g.part"] }
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
