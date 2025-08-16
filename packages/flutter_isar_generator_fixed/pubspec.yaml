@@ -1,12 +1,15 @@
 name: flutter_isar_generator_fixed
-description: "A new Flutter package project."
+description: "isar_generator fixed"
 version: 0.0.1
-homepage:
+homepage: https://github.com/angcyo/flutter_pub_generator_fixed
+repository: https://github.com/angcyo/flutter_pub_generator_fixed
+publish_to: https://github.com/angcyo/flutter_pub_generator_fixed
 
 environment:
   sdk: ^3.9.0
   flutter: ">=1.17.0"
 
+isar_version: &isar_version ^3.1.0+1
 dependencies:
   flutter:
     sdk: flutter
@@ -44,14 +47,14 @@ dependencies:
   # https://pub.dev/packages/xxh3
   xxh3: ^1.2.0
 
-isar_version: &isar_version ^3.1.0+1
+  # https://pub.dev/packages/isar
+  isar: *isar_version
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
 
-  # https://pub.dev/packages/isar
-  isar: *isar_version
 
 
 # For information on the generic Dart part of this file, see the
