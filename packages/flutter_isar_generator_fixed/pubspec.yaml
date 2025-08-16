@@ -3,7 +3,7 @@ description: "isar_generator fixed"
 version: 0.0.1
 homepage: https://github.com/angcyo/flutter_pub_generator_fixed
 repository: https://github.com/angcyo/flutter_pub_generator_fixed
-publish_to: https://github.com/angcyo/flutter_pub_generator_fixed
+#publish_to: none
 
 environment:
   sdk: ^3.9.0
