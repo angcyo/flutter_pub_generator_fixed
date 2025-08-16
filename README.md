@@ -1,4 +1,4 @@
-# flutter_generator_fixed
+# flutter_runner_generator_fixed
 
 维护了一些社区许久没有更新`Flutter SDK`的`build_runner`库.
 
