@@ -19,7 +19,7 @@ extension ClassElementX on ClassElement {
     return constructors.any(
       (ConstructorElement c) =>
           c.isPublic &&
-          !c.parameters.any((ParameterElement p) => !p.isOptional),
+          !c.formalParameters.any((FormalParameterElement p) => !p.isOptional),
     );
   }
 
@@ -27,11 +27,17 @@ extension ClassElementX on ClassElement {
     final ignoreFields =
         collectionAnnotation?.ignore ?? embeddedAnnotation!.ignore;
     return [
-      ...accessors.mapNotNull((e) => e.variable),
+      ...getters.mapNotNull((e) => e.variable),
+      ...setters.mapNotNull((e) => e.variable),
+      /*...accessors.mapNotNull((e) => e.variable),*/
       if (collectionAnnotation?.inheritance ?? embeddedAnnotation!.inheritance)
         for (InterfaceType supertype in allSupertypes) ...[
           if (!supertype.isDartCoreObject)
-            ...supertype.accessors.mapNotNull((e) => e.variable)
+            /*...supertype.accessors.mapNotNull((e) => e.variable)*/
+            ...[
+              ...getters.mapNotNull((e) => e.variable),
+              ...setters.mapNotNull((e) => e.variable),
+            ],
         ]
     ]
         .where(
@@ -45,15 +51,15 @@ extension ClassElementX on ClassElement {
         .toList();
   }
 
-  List<String> get enumConsts {
+  List<String?> get enumConsts {
     return fields.where((e) => e.isEnumConstant).map((e) => e.name).toList();
   }
 }
 
 extension PropertyElementX on PropertyInducingElement {
-  bool get isLink => type.element2!.name == 'IsarLink';
+  bool get isLink => type.element!.name == 'IsarLink';
 
-  bool get isLinks => type.element2!.name == 'IsarLinks';
+  bool get isLinks => type.element!.name == 'IsarLinks';
 
   Enumerated? get enumeratedAnnotation {
     final ann = _enumeratedChecker.firstAnnotationOfExact(nonSynthetic);
