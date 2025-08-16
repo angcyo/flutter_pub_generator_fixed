@@ -9,7 +9,6 @@ environment:
   sdk: ^3.9.0
   flutter: ">=1.17.0"
 
-isar_version: &isar_version ^3.1.0+1
 dependencies:
   flutter:
     sdk: flutter
@@ -48,14 +47,12 @@ dependencies:
   xxh3: ^1.2.0
 
   # https://pub.dev/packages/isar
-  isar: *isar_version
+  isar: ^3.1.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
