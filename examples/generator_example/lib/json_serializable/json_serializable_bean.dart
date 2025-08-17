@@ -7,7 +7,7 @@ part 'json_serializable_bean.g.dart';
 /// @date 2025/08/17
 ///
 ///
-@JsonSerializable()
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class Person {
   /// The generated code assumes these values exist in JSON.
   final String firstName, lastName;
