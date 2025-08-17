@@ -16,6 +16,17 @@ dependencies:
   # https://pub.dev/packages/isar
   isar: *isar_version
 
+  # https://pub.dev/packages/json_annotation
+  json_annotation: ^4.9.0
+
+dependency_overrides:
+  # https://pub.dev/packages/analyzer
+  # https://pub.dev/packages/pub_semver
+  #Because no versions of json_serializable match >6.10.0 <7.0.0 and json_serializable 6.10.0 depends on analyzer ^7.4.0, json_serializable ^6.10.0 requires analyzer ^7.4.0.
+  #And because every version of flutter_isar_generator_fixed from path depends on analyzer ^8.1.1, json_serializable ^6.10.0 is incompatible with flutter_isar_generator_fixed from path.
+  #So, because generator_example depends on both flutter_isar_generator_fixed from path and json_serializable ^6.10.0, version solving failed.
+  analyzer: ^8.1.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -24,6 +35,9 @@ dev_dependencies:
   # test
   flutter_isar_generator_fixed:
     path: ../../packages/flutter_isar_generator_fixed
+
+  # https://pub.dev/packages/json_serializable
+  json_serializable: ^6.10.0
 
   # https://pub.dev/packages/build_runner
   build_runner: any
