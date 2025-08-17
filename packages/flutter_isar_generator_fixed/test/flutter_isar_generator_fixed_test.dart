@@ -1,5 +1,3 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:flutter_isar_generator_fixed/flutter_isar_generator_fixed.dart';
 
 /*void main() {

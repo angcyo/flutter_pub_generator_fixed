@@ -1,5 +1,3 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:flutter_hive_generator_fixed/flutter_hive_generator_fixed.dart';
 
 void main() {
