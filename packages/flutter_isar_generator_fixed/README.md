@@ -11,6 +11,11 @@
 
 ```diff
 + build_runner: ^2.7.0
++ build: ^3.0.2
+
++ source_gen: ^3.1.0
 + analyzer: ^8.1.1
 + dart_style: ^3.1.2
+
++ isar: ^3.1.0+1
 ```
