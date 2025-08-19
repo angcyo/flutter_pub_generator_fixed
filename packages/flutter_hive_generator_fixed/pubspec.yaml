@@ -1,12 +1,12 @@
 name: flutter_hive_generator_fixed
 description: "hive_generator fixed"
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/angcyo/flutter_pub_generator_fixed
 repository: https://github.com/angcyo/flutter_pub_generator_fixed
 #publish_to: none
 
 environment:
-  sdk: ^3.9.0
+  sdk: ^3.8.0
 
 dependencies:
   # https://pub.dev/packages/build_runner
