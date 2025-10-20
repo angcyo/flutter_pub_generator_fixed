@@ -34,3 +34,8 @@
 
 + hive: ^2.2.3
 ```
+
+## 其它相关库
+
+- [flutter_pub_fixed](https://github.com/angcyo/flutter_pub_fixed)
+- [flutter_pub_generator_fixed](https://github.com/angcyo/flutter_pub_generator_fixed)
